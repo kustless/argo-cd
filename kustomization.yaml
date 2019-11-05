@@ -1,0 +1,36 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# Configurations
+
+# configurations:
+# - kustomizeconfig.yaml
+
+# Resources
+
+resources:
+- origin.yaml
+
+# Generators
+
+# configMapGenerator:
+# - name: argocd-cm
+#   files:
+#   - files/configManagementPlugins
+#   behavior: merge
+# - name: argocd-ssh-known-hosts-cm
+#   files:
+#   - files/ssh_known_hosts
+#   behavior: merge
+
+# Transformers
+
+# images:
+# - name: argoproj/argocd
+#   newName: yujunz/argocd
+#   newTag: dev-d8dbde64
+
+namespace: argocd
+
+# patches:
+# - patches.yaml
